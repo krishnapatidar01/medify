@@ -42,7 +42,7 @@ export default function SearchHospital() {
       }
     };
 
-    if (formData.state != "") {
+    if (formData.state !== "") {
       fetchCities();
     }
   }, [formData.state]);
@@ -84,7 +84,7 @@ export default function SearchHospital() {
         required
         sx={{ minWidth: 200, width: "100%" }}
       >
-        <MenuItem disabled value="" selected>
+       <MenuItem disabled value="">
           State
         </MenuItem>
         {states.map((state) => (
@@ -108,7 +108,7 @@ export default function SearchHospital() {
         required
         sx={{ minWidth: 200, width: "100%" }}
       >
-        <MenuItem disabled value="" selected>
+        <MenuItem disabled value="">
           City
         </MenuItem>
         {cities.map((city) => (
